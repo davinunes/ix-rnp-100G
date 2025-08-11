@@ -3,6 +3,8 @@
 Especificação na Nota:
 OPT-8PLHG10D-LR1 - TRANSCEPTOR ÓPTICO, 100GB, SINGLE LAMBDA WITH FEC, LC CONNECTOR, 10KM, WITH DDM (LR1)
 
+> O módulo de fibra óptica 100G QSFP28 LR1 de 10km é com apenas 1 via, mas o lado elétrico é com 4 vias
+
 Comando de diagnostico 1:
 ```
 <PatioBrasil-S6730-H24X6C>display transceiver diagnosis interface 100GE 0/0/3
