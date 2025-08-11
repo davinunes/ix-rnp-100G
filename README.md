@@ -3,6 +3,7 @@
 Especificação na Nota:
 OPT-8PLHG10D-LR1 - TRANSCEPTOR ÓPTICO, 100GB, SINGLE LAMBDA WITH FEC, LC CONNECTOR, 10KM, WITH DDM (LR1)
 
+Comando de diagnostico 1:
 ```
 <PatioBrasil-S6730-H24X6C>display transceiver diagnosis interface 100GE 0/0/3
 Port 100GE0/0/3 transceiver diagnostic information:
@@ -27,6 +28,7 @@ Voltage(V)      3.39           3.13         3.47         normal
 <PatioBrasil-S6730-H24X6C>
 ```
 
+Comando de Diagnostico2:
 ```
 <PatioBrasil-S6730-H24X6C>display transceiver interface 100GE 0/0/3 verbose
 
@@ -75,6 +77,54 @@ Diagnostic information:
 <PatioBrasil-S6730-H24X6C>
 ```
 
+Status da interface:
+```
+[PatioBrasil-S6730-H24X6C]display interface 100GE 0/0/3
+100GE0/0/3 current state : DOWN
+Line protocol current state : DOWN
+Description:IX-DF-RNP-LACP
+Switch Port, Link-type : trunk(configured),
+PVID :    1, TPID : 8100(Hex), The Maximum Frame Length is 9000
+IP Sending Frames' Format is PKTFMT_ETHNT_2, Hardware address is 20df-73a8-fa90
+Last physical up time   : 2025-08-08 20:04:34
+Last physical down time : 2025-08-09 20:41:49
+Current system time: 2025-08-11 14:35:12
+Port Mode: COMMON FIBER, Transceiver: 100GBASE_SR4_QSFP28
+Speed : 100000, Loopback: NONE
+Duplex: FULL,   Negotiation: DISABLE
+Mdi   : -,      Flow-control: DISABLE
+FEC   : NONE
+Last 300 seconds input rate 0 bits/sec, 0 packets/sec
+Last 300 seconds output rate 0 bits/sec, 0 packets/sec
+Input peak rate 0 bits/sec, Record time: -
+Output peak rate 8840 bits/sec, Record time: 2025-08-08 17:18:05
+
+Input:  0 packets, 0 bytes
+  Unicast:                          0,  Multicast:                           0
+  Broadcast:                        0,  Jumbo:                               0
+  Discard:                          0,  Pause:                               0
+
+  Total Error:                      0
+  CRC:                              0,  Giants:                              0
+  Runts:                            0,  Fragments:                           0
+  Alignments:                       0,  Symbols:                             0
+  Ignoreds:                         0
+
+Output:  101718 packets, 16078056 bytes
+  Unicast:                          0,  Multicast:                      101718
+  Broadcast:                        0,  Jumbo:                               0
+  Discard:                          0,  Pause:                               0
+
+
+    Input bandwidth utilization threshold : 80.00%
+    Output bandwidth utilization threshold: 80.00%
+    Input bandwidth utilization  :    0%
+    Output bandwidth utilization :    0%
+
+[PatioBrasil-S6730-H24X6C]
+```
+
+Config da Interface
 ```
 [PatioBrasil-S6730-H24X6C-100GE0/0/3]dis this
 #
@@ -86,6 +136,7 @@ interface 100GE0/0/3
 return
 ```
 
+Config do LACP:
 ```
 [PatioBrasil-S6730-H24X6C-Eth-Trunk3]dis this
 #
