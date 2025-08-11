@@ -1,5 +1,8 @@
 # ix-rnp-100G
 
+Especificação na Nota:
+OPT-8PLHG10D-LR1 - TRANSCEPTOR ÓPTICO, 100GB, SINGLE LAMBDA WITH FEC, LC CONNECTOR, 10KM, WITH DDM (LR1)
+
 ```
 <PatioBrasil-S6730-H24X6C>display transceiver diagnosis interface 100GE 0/0/3
 Port 100GE0/0/3 transceiver diagnostic information:
